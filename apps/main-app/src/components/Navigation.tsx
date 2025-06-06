@@ -11,6 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu'; // Example icon
 import { getRegisteredMicrofrontends } from '@/utils/microfrontendRegistry';
 import { Microfrontend } from '@/types/microfrontend';
+import '@/lib/microfrontendLoader';
 
 export default function Navigation() {
   const [microfrontends, setMicrofrontends] = useState<Microfrontend[]>([]);
