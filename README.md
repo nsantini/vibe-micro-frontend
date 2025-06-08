@@ -1,35 +1,36 @@
-# Microfrontend Foundation Project
-
-This project sets up a foundation for a microfrontend architecture using Next.js and NPM workspaces.
-
-## Project Structure
-
-```
-.
-├── apps/
-│   └── main-app/               # Host Next.js application
-│       ├── microfrontends/     # Directory for individual microfrontend applications/packages
-│       ├── public/             # Static assets for the main app
-│       ├── src/                # Source code for the main Next.js application
-│       │   ├── app/            # Next.js App Router
-│       │   └── ...             # Other Next.js specific directories and files
-│       ├── next.config.mjs     # Next.js configuration
-│       ├── package.json        # Package configuration for the main-app
-│       └── tsconfig.json       # TypeScript configuration for the main-app
-├── package.json                # Root package.json for the NPM monorepo
-├── tasks/                      # Project tasks and planning documents
-│   └── ...
-└── README.md                   # This file
-```
-
-## Overview
-
-- **Monorepo Setup**: The project uses NPM workspaces to manage multiple packages. The root `package.json` defines the workspaces.
-- **Host Application (`apps/main-app`)**: This is a Next.js application that will serve as the host or shell for the microfrontends. It includes:
-    - TypeScript, ESLint, and Tailwind CSS pre-configured.
-    - A `src/` directory for its source code.
-    - An `apps/main-app/microfrontends/` directory, which is intended to house the individual microfrontend packages/applications.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-(Details to be added as the project progresses, e.g., how to run, build, test)
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

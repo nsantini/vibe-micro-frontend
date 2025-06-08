@@ -16,6 +16,20 @@ registerMicrofrontend({
   },
 });
 
+// Lazily load the MarkdownNotes microfrontend component
+const MarkdownNotesAppMFE = React.lazy(() => import('../../microfrontends/MarkdownNotes/MarkdownNotesApp'));
+
+// Register the MarkdownNotes microfrontend
+registerMicrofrontend({
+  id: 'markdown-notes',
+  path: 'markdown-notes', // URL path will be /markdown-notes
+  name: 'Markdown Notes', // Display name for navigation
+  component: MarkdownNotesAppMFE,
+  meta: {
+    // any additional metadata
+  },
+});
+
 // To ensure this module executes and registers the MFE, 
 // it needs to be imported in a central part of the application,
 // e.g., in RootLayout (layout.tsx) or the main page.tsx.
